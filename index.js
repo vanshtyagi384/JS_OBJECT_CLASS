@@ -13,16 +13,18 @@ const obj1 = {
 const obj2 = {
     fname: 'vansh',
     lname: 'tyagi',
-    getfullname: function (){
-        if(this.lname !== undefined)
-            return `${this.fname} ${this.lname}`;
-        return this.fname
-    },
-}
+};
+
+
+obj1.__proto__ = person
+obj2.__proto__ = person 
+
+    
 
 
 // DRY - do not repeat yourself 
 
 console.log(obj1.getfullname());// Independent memeory allocation 
 console.log(obj2.getfullname());// Different memory allocation in both of the object 
+console.log(obj2.toString());
 
